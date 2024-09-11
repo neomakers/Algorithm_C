@@ -195,7 +195,7 @@ int main() {
 编译时需要将主程序与两个模块一起编译。可以使用以下命令：
 
 ```bash
-g++ lesson003_03_selectionSort.cpp src/read_data.cpp src/selection_sort.cpp -I headers -o selection_sort_program
+g++ lesson002_03_selectionSort.cpp src/read_data.cpp src/selection_sort.cpp -I headers -o selection_sort_program
 ```
 
 此命令告诉编译器在 `headers/` 目录中查找头文件，并将 `src/` 目录中的源文件编译为可执行程序 `selection_sort_program`。

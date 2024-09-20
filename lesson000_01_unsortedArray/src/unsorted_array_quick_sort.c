@@ -11,16 +11,16 @@ void swap(int *a, int *b) {
 // 分区函数
 int partition(int arr[], int l, int r) {
     int pivot = arr[r];  // 选择最右边的元素作为基准点
-    int i = l - 1;       // i 是小于 pivot 的最后一个元素的索引
+    int w = l ;       // w 是交换位置，由于第一次是从l开始
 
     for (int j = l; j < r; j++) {
         if (arr[j] <= pivot) {
-            i++;
-            swap(&arr[i], &arr[j]);
+            swap(&arr[w], &arr[j]);           
+            w++;
         }
     }
-    swap(&arr[i + 1], &arr[r]);  // 将基准点放到正确的位置
-    return i + 1;                // 返回基准点的位置
+    swap(&arr[w], &arr[r]);  // 将基准点放到正确的位置
+    return w;                // 返回基准点的位置
 }
 
 // 快速选择函数
